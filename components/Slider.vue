@@ -1,184 +1,79 @@
+<script setup>
+
+
+const frameworks = {
+  "React": {
+    "Typ": "Biblioteka front-end",
+    "Rodzaj aplikacji": "Aplikacje webowe typu SPA (Single Page Applications)",
+    "Opis": "React to popularna biblioteka stworzona przez Facebooka do budowy interfejsów użytkownika. Jest używana głównie do tworzenia dynamicznych, interaktywnych stron internetowych."
+  },
+  "Angular": {
+    "Typ": "Framework front-end",
+    "Rodzaj aplikacji": "Aplikacje webowe typu SPA i MPA (Multi-Page Applications)",
+    "Opis": "Angular to kompleksowy framework rozwijany przez Google. Zapewnia narzędzia do tworzenia zarówno prostych stron internetowych, jak i skomplikowanych aplikacji enterprise."
+  },
+  "Node.js": {
+    "Typ": "Środowisko back-end",
+    "Rodzaj aplikacji": "Aplikacje serwerowe i mikroserwisy",
+    "Opis": "Node.js to środowisko uruchomieniowe JavaScript po stronie serwera. Jest używane do tworzenia skalowalnych aplikacji serwerowych i API."
+  },
+  "Express.js": {
+    "Typ": "Framework back-end",
+    "Rodzaj aplikacji": "Aplikacje serwerowe i API",
+    "Opis": "Express.js to minimalistyczny framework do tworzenia aplikacji serwerowych w Node.js. Jest często stosowany do tworzenia API RESTful."
+  },
+  "Vue.js": {
+    "Typ": "Biblioteka front-end",
+    "Rodzaj aplikacji": "Aplikacje webowe typu SPA",
+    "Opis": "Vue.js to prosta i elastyczna biblioteka do budowy interfejsów użytkownika. Jest często wybierana przez deweloperów do mniejszych projektów."
+  },
+  "Ember.js": {
+    "Typ": "Framework front-end",
+    "Rodzaj aplikacji": "Aplikacje webowe typu SPA",
+    "Opis": "Ember.js to framework front-end, który dostarcza zestaw konwencji i narzędzi do tworzenia skomplikowanych aplikacji webowych."
+  },
+  "Meteor": {
+    "Typ": "Framework full-stack",
+    "Rodzaj aplikacji": "Aplikacje webowe typu SPA i MPA",
+    "Opis": "Meteor to framework full-stack, który obsługuje zarówno front-end, jak i back-end. Umożliwia tworzenie czasu rzeczywistego (real-time) aplikacji webowych."
+  },
+  "Electron": {
+    "Typ": "Framework do tworzenia aplikacji desktopowych",
+    "Rodzaj aplikacji": "Aplikacje desktopowe",
+    "Opis": "Electron pozwala na tworzenie aplikacji desktopowych przy użyciu HTML, CSS i JavaScript. Jest używany do budowy aplikacji na różne platformy, takie jak Windows, macOS i Linux."
+  },
+  "D3.js": {
+    "Typ": "Biblioteka front-end",
+    "Rodzaj aplikacji": "Wizualizacje danych i grafiki interaktywne",
+    "Opis": "D3.js to biblioteka służąca do tworzenia interaktywnych wizualizacji danych w przeglądarkach internetowych."
+  },
+  "Nest.js": {
+    "Typ": "Framework back-end",
+    "Rodzaj aplikacji": "Aplikacje serwerowe i API",
+    "Opis": "Nest.js to framework back-end oparty na TypeScript, który promuje strukturalne i skalowalne podejście do tworzenia aplikacji serwerowych."
+  }
+}
+
+</script>
 <template>
   <aside aria-label="Related articles" class="py-8 bg-white dark:bg-gray-900 lg:py-16 antialiased" />
   <div class="px-4 mx-auto w-full max-w-screen-xl">
       <h2 class="mb-8 text-2xl font-bold text-gray-900 dark:text-white">Trending on Flowbite</h2>
       <div id="animation-carousel" data-carousel="slide">
-          <div class="relative overflow-hidden rounded-lg h-[480px]">
+          <div class="relative overflow-hidden rounded-lg h-[600px]">
               <div class="hidden bg-white duration-700 ease-in-out dark:bg-gray-900" data-carousel-item>
                   <div class="grid grid-cols-1 gap-4 sm:grid-cols-2 xl:grid-cols-3">
-                      <article class="p-4 mx-auto max-w-sm bg-white rounded-lg shadow-md border border-gray-200 dark:border-gray-800 dark:bg-gray-800 dark:border-gray-700">
-                          <a href="#">
-                              <img class="mb-5 rounded-lg" src="https://flowbite.s3.amazonaws.com/blocks/marketing-ui/blog/office-laptops.png" alt="office laptop working">
-                          </a>
-                          <h3 class="mb-2 text-xl font-bold tracking-tight text-gray-900 lg:text-2xl dark:text-white">
-                              <a href="#">React</a>
-                          </h3>
-                          <p class="mb-3 text-gray-500 dark:text-gray-400"> Aplikacje webowe typu SPA (Single Page Applications)</p>
-                          <p class="mb-3 text-gray-500 dark:text-gray-400">React to popularna biblioteka stworzona przez Facebooka do budowy interfejsów użytkownika. Jest używana głównie do tworzenia dynamicznych, interaktywnych stron internetowych.</p>
-                          <a href="#" class="inline-flex items-center font-medium text-primary-600 hover:text-primary-800 dark:text-primary-500 hover:no-underline">
-                              Czytaj więcej <svg class="mt-px ml-1 w-3 h-3" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 10"><path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 5h12m0 0L9 1m4 4L9 9"/></svg> 
-                          </a>
-                      </article>
-                      <article class="hidden p-4 mx-auto max-w-sm bg-white rounded-lg shadow-md dark:bg-gray-800 border border-gray-200 dark:border-gray-800 sm:block">
-                          <a href="#">
-                              <img class="mb-5 rounded-lg" src="https://flowbite.s3.amazonaws.com/blocks/marketing-ui/blog/google-hq.png" alt="google hq">
-                          </a>
-                          <div class="flex items-center mb-3 space-x-2">
-                              <img class="w-8 h-8 rounded-full" src="https://flowbite.s3.amazonaws.com/blocks/marketing-ui/avatars/roberta-casas.png" alt="Roberta Casas avatar">
-                              <div class="font-medium dark:text-white">
-                                  <div>Roberta Casas</div>
-                                  <div class="text-sm font-normal text-gray-500 dark:text-gray-400">Aug 15, 2021 · 16 min read</div>
-                              </div>
-                          </div>
-                          <h3 class="mb-2 text-xl font-bold tracking-tight text-gray-900 lg:text-2xl dark:text-white">
-                              <a href="#">We partnered up with Google</a>
-                          </h3>
-                          <p class="mb-3 text-gray-500 dark:text-gray-400">Over the past year, Volosoft has undergone many changes! After months of preparation and some hard work, we moved to our new office.</p>
-                          <a href="#" class="inline-flex items-center font-medium text-primary-600 hover:text-primary-800 dark:text-primary-500 hover:no-underline">
-                              Read more <svg class="mt-px ml-1 w-3 h-3" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 10"><path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 5h12m0 0L9 1m4 4L9 9"/></svg> 
-                          </a>
-                      </article>
-                      <article class="hidden p-4 mx-auto max-w-sm bg-white rounded-lg shadow-md dark:bg-gray-800 border border-gray-200 dark:border-gray-800 xl:block">
-                          <a href="#">
-                              <img class="mb-5 rounded-lg" src="https://flowbite.s3.amazonaws.com/blocks/marketing-ui/blog/office-laptops-2.png" alt="office laptop working">
-                          </a>
-                          <div class="flex items-center mb-3 space-x-2">
-                              <img class="w-8 h-8 rounded-full" src="https://flowbite.s3.amazonaws.com/blocks/marketing-ui/avatars/sofia-mcguire.png" alt="Sofia McGuire avatar">
-                              <div class="font-medium dark:text-white">
-                                  <div>Sofia McGuire</div>
-                                  <div class="text-sm font-normal text-gray-500 dark:text-gray-400">Aug 15, 2021 · 16 min read</div>
-                              </div>
-                          </div>
-                          <h3 class="mb-2 text-xl font-bold tracking-tight text-gray-900 lg:text-2xl dark:text-white">
-                              <a href="#">Our first project with React</a>
-                          </h3>
-                          <p class="mb-3 text-gray-500 dark:text-gray-400">Over the past year, Volosoft has undergone many changes! After months of preparation and some hard work, we moved to our new office.</p>
-                          <a href="#" class="inline-flex items-center font-medium text-primary-600 hover:text-primary-800 dark:text-primary-500 hover:no-underline">
-                              Read more <svg class="mt-px ml-1 w-3 h-3" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 10"><path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 5h12m0 0L9 1m4 4L9 9"/></svg> 
-                          </a>
-                      </article>
+                      
                   </div>
               </div>
               <div class="hidden bg-white duration-700 ease-in-out dark:bg-gray-900" data-carousel-item>
                   <div class="grid grid-cols-1 gap-4 sm:grid-cols-2 xl:grid-cols-3">
-                      <article class="p-4 mx-auto max-w-sm bg-white rounded-lg shadow-md dark:bg-gray-800 border border-gray-200 dark:border-gray-800">
-                          <a href="#">
-                              <img class="mb-5 rounded-lg" src="https://flowbite.s3.amazonaws.com/blocks/marketing-ui/blog/google-hq.png" alt="google hq">
-                          </a>
-                          <div class="flex items-center mb-3 space-x-2">
-                              <img class="w-8 h-8 rounded-full" src="https://flowbite.s3.amazonaws.com/blocks/marketing-ui/avatars/roberta-casas.png" alt="Roberta Casas avatar">
-                              <div class="font-medium dark:text-white">
-                                  <div>Roberta Casas</div>
-                                  <div class="text-sm font-normal text-gray-500 dark:text-gray-400">Aug 15, 2021 · 16 min read</div>
-                              </div>
-                          </div>
-                          <h3 class="mb-2 text-xl font-bold tracking-tight text-gray-900 lg:text-2xl dark:text-white">
-                              <a href="#">We partnered up with Google</a>
-                          </h3>
-                          <p class="mb-3 text-gray-500 dark:text-gray-400">Over the past year, Volosoft has undergone many changes! After months of preparation and some hard work, we moved to our new office.</p>
-                          <a href="#" class="inline-flex items-center font-medium text-primary-600 hover:text-primary-800 dark:text-primary-500 hover:no-underline">
-                              Read more <svg class="mt-px ml-1 w-3 h-3" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 10"><path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 5h12m0 0L9 1m4 4L9 9"/></svg> 
-                          </a>
-                      </article>
-                      <article class="hidden p-4 mx-auto max-w-sm bg-white rounded-lg shadow-md dark:bg-gray-800 border border-gray-200 dark:border-gray-800 sm:block">
-                          <a href="#">
-                              <img class="mb-5 rounded-lg" src="https://flowbite.s3.amazonaws.com/blocks/marketing-ui/blog/office-laptops.png" alt="office laptop working">
-                          </a>
-                          <div class="flex items-center mb-3 space-x-2">
-                              <img class="w-8 h-8 rounded-full" src="https://flowbite.s3.amazonaws.com/blocks/marketing-ui/avatars/jese-leos.png" alt="Jese Leos avatar">
-                              <div class="font-medium dark:text-white">
-                                  <div>Jese Leos</div>
-                                  <div class="text-sm font-normal text-gray-500 dark:text-gray-400">Aug 15, 2021 · 16 min read</div>
-                              </div>
-                          </div>
-                          <h3 class="mb-2 text-xl font-bold tracking-tight text-gray-900 lg:text-2xl dark:text-white">
-                              <a href="#">Our first office</a>
-                          </h3>
-                          <p class="mb-3 text-gray-500 dark:text-gray-400">Over the past year, Volosoft has undergone many changes! After months of preparation and some hard work, we moved to our new office.</p>
-                          <a href="#" class="inline-flex items-center font-medium text-primary-600 hover:text-primary-800 dark:text-primary-500 hover:no-underline">
-                              Read more <svg class="mt-px ml-1 w-3 h-3" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 10"><path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 5h12m0 0L9 1m4 4L9 9"/></svg> 
-                          </a>
-                      </article>
-                      <article class="hidden p-4 mx-auto max-w-sm bg-white rounded-lg shadow-md dark:bg-gray-800 border border-gray-200 dark:border-gray-800 xl:block">
-                          <a href="#">
-                              <img class="mb-5 rounded-lg" src="https://flowbite.s3.amazonaws.com/blocks/marketing-ui/blog/office-laptops-2.png" alt="office laptop working">
-                          </a>
-                          <div class="flex items-center mb-3 space-x-2">
-                              <img class="w-8 h-8 rounded-full" src="https://flowbite.s3.amazonaws.com/blocks/marketing-ui/avatars/sofia-mcguire.png" alt="Sofia McGuire avatar">
-                              <div class="font-medium dark:text-white">
-                                  <div>Sofia McGuire</div>
-                                  <div class="text-sm font-normal text-gray-500 dark:text-gray-400">Aug 15, 2021 · 16 min read</div>
-                              </div>
-                          </div>
-                          <h3 class="mb-2 text-xl font-bold tracking-tight text-gray-900 lg:text-2xl dark:text-white">
-                              <a href="#">Our first project with React</a>
-                          </h3>
-                          <p class="mb-3 text-gray-500 dark:text-gray-400">Over the past year, Volosoft has undergone many changes! After months of preparation and some hard work, we moved to our new office.</p>
-                          <a href="#" class="inline-flex items-center font-medium text-primary-600 hover:text-primary-800 dark:text-primary-500 hover:no-underline">
-                              Read more <svg class="mt-px ml-1 w-3 h-3" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 10"><path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 5h12m0 0L9 1m4 4L9 9"/></svg> 
-                          </a>
-                      </article>
+
                   </div>
               </div>
               <div class="hidden bg-white duration-700 ease-in-out dark:bg-gray-900" data-carousel-item>
                   <div class="grid grid-cols-1 gap-4 sm:grid-cols-2 xl:grid-cols-3">
-                      <article class="p-4 mx-auto max-w-sm bg-white rounded-lg shadow-md dark:bg-gray-800 border border-gray-200 dark:border-gray-800">
-                          <a href="#">
-                              <img class="mb-5 rounded-lg" src="https://flowbite.s3.amazonaws.com/blocks/marketing-ui/blog/office-laptops-2.png" alt="office laptop working">
-                          </a>
-                          <div class="flex items-center mb-3 space-x-2">
-                              <img class="w-8 h-8 rounded-full" src="https://flowbite.s3.amazonaws.com/blocks/marketing-ui/avatars/sofia-mcguire.png" alt="Sofia McGuire avatar">
-                              <div class="font-medium dark:text-white">
-                                  <div>Sofia McGuire</div>
-                                  <div class="text-sm font-normal text-gray-500 dark:text-gray-400">Aug 15, 2021 · 16 min read</div>
-                              </div>
-                          </div>
-                          <h3 class="mb-2 text-xl font-bold tracking-tight text-gray-900 lg:text-2xl dark:text-white">
-                              <a href="#">Our first project with React</a>
-                          </h3>
-                          <p class="mb-3 text-gray-500 dark:text-gray-400">Over the past year, Volosoft has undergone many changes! After months of preparation and some hard work, we moved to our new office.</p>
-                          <a href="#" class="inline-flex items-center font-medium text-primary-600 hover:text-primary-800 dark:text-primary-500 hover:no-underline">
-                              Read more <svg class="mt-px ml-1 w-3 h-3" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 10"><path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 5h12m0 0L9 1m4 4L9 9"/></svg> 
-                          </a>
-                      </article>
-                      <article class="hidden p-4 mx-auto max-w-sm bg-white rounded-lg shadow-md dark:bg-gray-800 border border-gray-200 dark:border-gray-800 sm:block">
-                          <a href="#">
-                              <img class="mb-5 rounded-lg" src="https://flowbite.s3.amazonaws.com/blocks/marketing-ui/blog/google-hq.png" alt="google hq">
-                          </a>
-                          <div class="flex items-center mb-3 space-x-2">
-                              <img class="w-8 h-8 rounded-full" src="https://flowbite.s3.amazonaws.com/blocks/marketing-ui/avatars/roberta-casas.png" alt="Roberta Casas avatar">
-                              <div class="font-medium dark:text-white">
-                                  <div>Roberta Casas</div>
-                                  <div class="text-sm font-normal text-gray-500 dark:text-gray-400">Aug 15, 2021 · 16 min read</div>
-                              </div>
-                          </div>
-                          <h3 class="mb-2 text-xl font-bold tracking-tight text-gray-900 lg:text-2xl dark:text-white">
-                              <a href="#">We partnered up with Google</a>
-                          </h3>
-                          <p class="mb-3 text-gray-500 dark:text-gray-400">Over the past year, Volosoft has undergone many changes! After months of preparation and some hard work, we moved to our new office.</p>
-                          <a href="#" class="inline-flex items-center font-medium text-primary-600 hover:text-primary-800 dark:text-primary-500 hover:no-underline">
-                              Read more <svg class="mt-px ml-1 w-3 h-3" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 10"><path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 5h12m0 0L9 1m4 4L9 9"/></svg> 
-                          </a>
-                      </article>
-                      <article class="hidden p-4 mx-auto max-w-sm bg-white rounded-lg shadow-md dark:bg-gray-800 border border-gray-200 dark:border-gray-800 xl:block">
-                          <a href="#">
-                              <img class="mb-5 rounded-lg" src="https://flowbite.s3.amazonaws.com/blocks/marketing-ui/blog/office-laptops.png" alt="office laptop working">
-                          </a>
-                          <div class="flex items-center mb-3 space-x-2">
-                              <img class="w-8 h-8 rounded-full" src="https://flowbite.s3.amazonaws.com/blocks/marketing-ui/avatars/jese-leos.png" alt="Jese Leos avatar">
-                              <div class="font-medium dark:text-white">
-                                  <div>Jese Leos</div>
-                                  <div class="text-sm font-normal text-gray-500 dark:text-gray-400">Aug 15, 2021 · 16 min read</div>
-                              </div>
-                          </div>
-                          <h3 class="mb-2 text-xl font-bold tracking-tight text-gray-900 lg:text-2xl dark:text-white">
-                              <a href="#">Our first office</a>
-                          </h3>
-                          <p class="mb-3 text-gray-500 dark:text-gray-400">Over the past year, Volosoft has undergone many changes! After months of preparation and some hard work, we moved to our new office.</p>
-                          <a href="#" class="inline-flex items-center font-medium text-primary-600 hover:text-primary-800 dark:text-primary-500 hover:no-underline">
-                              Read more <svg class="mt-px ml-1 w-3 h-3" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 10"><path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 5h12m0 0L9 1m4 4L9 9"/></svg> 
-                          </a>
-                      </article>
+
                   </div>
               </div>
           </div>
